@@ -1,0 +1,126 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    background-color: rgba(255, 180, 251, 0.06);
+}
+.text{
+    
+    margin: 50px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.card{
+    background-color: white;
+    padding: 40px 60px;
+    border-radius: 3%;
+}
+
+/* New album page styles */
+html,body{
+    height: 100%;
+    margin: 0;
+    background-color: rgba(255, 180, 251, 0.06);
+}
+/* New album page styles */
+:root{--bg:#0f1724;--card:#0f1728aa;--glass:rgba(255,255,255,0.06);--accent:#ff7ab6;--muted:#9aa4b2}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef8;background:linear-gradient(180deg,#071126 0%,#0b1420 100%);padding:28px}
+.container{max-width:1000px;margin:0 auto;padding:0 12px}
+.container{max-width:920px;margin:0 auto;padding:0 14px}
+.site-header{padding:24px 0;text-align:center}
+.site-header{padding:24px 0 10px;text-align:left}
+.site-header h1{margin:0;font-size:28px}
+.site-header h1{margin:0;font-size:34px;font-weight:700;color:#fff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+.subtitle{margin:6px 0 0;color:var(--muted)}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:14px}
+.gallery{display:flex;flex-direction:column;gap:18px;padding:8px 0}
+.gallery{display:flex;flex-direction:column;gap:18px;padding:12px 0}
+
+/* modern glass cards with subtle 3D via CSS variables (JS will set them) */
+.track{--rx:0deg;--ry:0deg;--tx:0px;--scale:1;display:flex;align-items:center;gap:14px;padding:12px;border-radius:12px;background:linear-gradient(135deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));backdrop-filter:blur(6px);box-shadow:0 6px 24px rgba(2,6,23,0.6);transition:transform 300ms cubic-bezier(.2,.9,.2,1),box-shadow 300ms;transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) translateX(var(--tx)) scale(var(--scale));cursor:pointer}
+.track:hover{--scale:1.02;box-shadow:0 18px 36px rgba(2,6,23,0.7)}
+.cover{display:block;flex:0 0 140px;border-radius:12px;overflow:hidden;transform-origin:center center}
+.cover img{width:140px;height:140px;object-fit:cover;display:block;transition:transform 400ms}
+.track:hover .cover img{transform:scale(1.06)}
+.track figcaption{padding:0;color:var(--muted)}
+.track h2{margin:0 0 6px;font-size:16px;color:#fff}
+.track a{color:var(--accent);text-decoration:none}
+.meta{color:var(--muted);font-size:13px;margin:0}
+.track:active{transform:translateY(4px) scale(.995)}
+.track.active{transform:translateX(12px) translateY(-4px) scale(1.03);box-shadow:0 30px 60px rgba(2,6,23,0.75)}
+
+.site-footer{padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
+
+@media (min-width:900px){body{padding:44px}.container{max-width:1100px}}
+
+@media (max-width:520px){
+    .cover{flex:0 0 120px}
+    .cover img{width:120px;height:120px}
+    .site-header h1{font-size:24px}
+}
+.container{max-width:1000px;margin:0 auto;padding:0 12px}
+.site-header{padding:24px 0;text-align:center}
+.site-header h1{margin:0;font-size:28px}
+.subtitle{margin:6px 0 0;color:var(--muted)}
+.gallery{display:flex;flex-direction:column;gap:18px;padding:8px 0}
+.track{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06);display:flex;flex-direction:row;align-items:center;gap:12px;padding:8px;transition:transform 260ms cubic-bezier(.2,.9,.2,1),box-shadow 260ms;cursor:pointer}
+.track img{width:92px;height:92px;object-fit:cover;border-radius:6px;flex:0 0 92px}
+.track figcaption{padding:0}
+.track h2{margin:0 0 4px;font-size:16px}
+.track a{color:var(--accent);text-decoration:none}
+.track .meta{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+.track:active{transform: scale(0.95)}
+.track.active{transform: scale(1.0);box-shadow: 0px 10px 20px rgba(0,0,0,0.12)}
+.track img{width:100%;height:auto;display:block}
+.track figcaption{padding:12px}
+.track h2{margin:0 0 6px;font-size:16px}
+.track a{color:var(--accent);text-decoration:none}
+.track a:hover{text-decoration:underline}
+.meta{color:var(--muted);font-size:13px;margin:0}
+.site-footer{padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
+
+@media (min-width:900px){body{padding:40px}}
+
+
+/* Force full-page black background (including off-screen area) */
+html,
+body {
+    background: #000 !important;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Make track cards transparent */
+.track {
+    background: transparent !important;
+}
+
+/* Make track cards 50% transparent */
+.track {
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Glass reflection effect for track cards */
+.track {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.18) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.track::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -25%;
+    width: 65%;
+    height: 180%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.06) 45%, rgba(255, 255, 255, 0));
+    transform: rotate(10deg);
+    pointer-events: none;
+}
