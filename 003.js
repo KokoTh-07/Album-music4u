@@ -40,4 +40,34 @@ document.addEventListener('DOMContentLoaded', function () {
       setVars(t, 0, 0, 0, 1.01);
     });
   });
+  (function () {
+    const openButton = document.getElementById("openProModal");
+    const closeButton = document.getElementById("closeProModal");
+    const overlay = document.getElementById("proModalOverlay");
+
+    if (!openButton || !closeButton || !overlay) return;
+
+    const openModal = () => {
+      overlay.classList.add("is-open");
+      overlay.setAttribute("aria-hidden", "false");
+    };
+
+    const closeModal = () => {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+    };
+
+    openButton.addEventListener("click", openModal);
+    closeButton.addEventListener("click", closeModal);
+
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) closeModal();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && overlay.classList.contains("is-open")) {
+        closeModal();
+      }
+    });
+  })();
 });
