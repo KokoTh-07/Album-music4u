@@ -13,6 +13,7 @@
 		<div class="container">
 			<h1>Album For Gaem</h1>
 			<p class="subtitle">อัลบั้มนี้เราทำให้เองน้ะ • 2026</p>
+			<button id="openProModal" class="pro-modal-open-btn" type="button">Lecture</button>
 		</div>
 	</header>
 
@@ -611,12 +612,21 @@
 				<p class="meta">4:30 • BILLKIN</p>
 			</figcaption>
 		</figure>
+		
 	</main>
 
 
 	<footer class="site-footer">
 		<div class="container">ขอขอบคุณสำหรับทุกๆอย่าง เราอยากให้มันเป็นแค่การเริ่มต้นสำหรับเรา เพลงที่ 19 คือความรู้สึกของเราเอง</div>
 	</footer>
+	<!-- HTML: Professional Glassmorphism Modal -->
+	<div id="proModalOverlay" class="pro-modal-overlay" aria-hidden="true">
+		<div class="pro-modal-box" role="dialog" aria-modal="true" aria-labelledby="proModalTitle">
+			<button id="closeProModal" class="pro-modal-close-btn" type="button" aria-label="Close modal">&times;</button>
+			<h2 id="proModalTitle">Welcome to my website ❤</h2>
+			<p>     สวัสดีน้ะแก้ม นี่คือเว็บไซต์ที่เราขอสร้างมันให้เองน้ะ เว็บนี่จะรวบรวมเพลงที่เราชอบและความรู้สึกของเราเอาใว้ เราสร้างมันโดยได้แรงบรรดาลใจมาจาก IOS26 ของเองที่มี UI แบบ Liquid Glass ที่เน้นความโปร่งใสเงางามเหมือนกระจกจริงๆ เราจะขอมอบอัลบั้มนี้ให้เองมันคงไม่ใช่เพลงที่เองอาจจะชอบทั้งหมด แต่เราก็ขอให้เองรับฟังอัลบั้มนี้อย่างมีความสุข ❤</p>
+		</div>
+	</div>
 	<script src="003.js"></script>
 </body>
 </html>
