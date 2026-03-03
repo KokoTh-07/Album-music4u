@@ -70,4 +70,30 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   })();
+
+  (function bounceBrowserTitle() {
+    const baseTitle = document.title.trim();
+    if (!baseTitle) return;
+
+    let index = 0;
+    let direction = 1;
+
+    setInterval(() => {
+      const chars = baseTitle.split('');
+      const bouncedTitle = chars
+        .map((char, i) => (i === index ? '[' + char + ']' : char))
+        .join('');
+
+      document.title = bouncedTitle;
+
+      if (index === chars.length - 1) {
+        direction = -1;
+      } else if (index === 0) {
+        direction = 1;
+      }
+
+      index += direction;
+    }, 220);
+  })();
+
 });
